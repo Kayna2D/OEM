@@ -1,3 +1,5 @@
+import math
+
 def menu():
   while True:
     print("1 - Campo eletrico maximo (Em)")

@@ -1,4 +1,5 @@
 import math
+from  decimal import Decimal
 
 def menu():
   while True:
@@ -51,7 +52,17 @@ def intensidade():
 
 #Funções 2
 def frequencia():
-  print("Entrar com frequencia e sair com comprimento, numero de ondas e frequencia angular")
+  print("Entre com a frequencia (Hz)")
+  f = float(input()) * 10**11
+
+  l = c / f
+  k = 2 * math.pi / l
+  w = 2 * math.pi * f
+
+  print('Comprimento (m): %.2E' % Decimal (l))
+  print('Numero de ondas (rad/m): %.2E' % Decimal (k))
+  print('Frequencia angular (rad/s): %.2E' % Decimal (w))
+
 
 def comprimento():
   print("Entrar com comprimento e sair com frequencia, numero de ondas e frequencia angular")

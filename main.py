@@ -65,13 +65,40 @@ def frequencia():
 
 
 def comprimento():
-  print("Entrar com comprimento e sair com frequencia, numero de ondas e frequencia angular")
+  print("Entre com o comprimento (m): ")
+  l = float(input()) * 10**-10
+
+  f = c / l
+  k = 2 * math.pi / l
+  w = 2 * math.pi * f
+
+  print('Frequencia (Hz): %.2E' % Decimal (f))
+  print('Numero de ondas (rad/m): %.2E' % Decimal (k))
+  print('Frequencia angular (rad/s): %.2E' % Decimal (w))
 
 def numeroOndas():
-  print("Entrar com numero de ondas e sair com comprimento, frequencia e frequencia angular")
+  print("Entre com numero de ondas (rad/m): ")
+  k = float(input()) * 10**-1
+
+  l = 2 * math.pi / k
+  f = c / l
+  w = 2 * math.pi * f
+
+  print('Frequencia (Hz): %.2E' % Decimal (f))
+  print('Comprimento (m): %.2E' % Decimal (l))
+  print('Frequencia angular (rad/s): %.2E' % Decimal (w))
 
 def frequenciaAngular():
-  print("Entrar com frequencia angular e sair com comprimento, numero de ondas e frequencia")
+  print("Entre com a frequencia angular (rad/s): ")
+  w = float(input()) * 10**6
+  
+  f = w / (2 * math.pi)
+  l = c / f
+  k = 2 * math.pi / l
+
+  print('Comprimento (m): %.2E' % Decimal (l))
+  print('Numero de ondas (rad/m): %.2E' % Decimal (k))
+  print('Frequencia (Hz): %.2E' % Decimal (f))
 
 c = 3 * 10**8
 

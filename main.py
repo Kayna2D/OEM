@@ -1,6 +1,11 @@
 import math
 from  decimal import Decimal
 
+# Constantes
+c = 3 * 10**8  # Velocidade da luz em m/s
+epsilon_0 = 8.85 * 10**-12  # Permissividade do vácuo em F/m
+Z_0 = 377  # Impedância do vácuo em ohms
+
 def menu():
   while True:
     print("1 - Campo eletrico maximo (Em)")
@@ -39,16 +44,35 @@ def menu():
       print("Saindo...")
       break
 
-# Funções 1
 def em():
-  print("Entrar com Em e sair com Bm e I")
+    print("Para obter Bm e I Entre com o campo elétrico máximo (Em) em V/m:")
+    Em = float(input())
+    
+    Bm = Em / c
+    I = 0.5 * epsilon_0 * c * Em**2
+    
+    print(f'Campo magnético máximo (Bm): {Decimal(Bm):.2E} T')
+    print(f'Intensidade (I): {Decimal(I):.2E} W/m²')
 
 def bm():
-  print("Entrar com Bm e sair com Em e I")
+    print("Para obter Em e I entre com o campo magnético máximo (Bm) em T:")
+    Bm = float(input())
+    
+    Em = c * Bm
+    I = 0.5 * (Em**2 / Z_0)
+    
+    print(f'Campo elétrico máximo (Em): {Decimal(Em):.2E} V/m')
+    print(f'Intensidade (I): {Decimal(I):.2E} W/m²')
 
 def intensidade():
-  print("Entrar com I e sair com Bm e Em")
-
+    print("Para obter Em e Bm Entre com a intensidade (I) em W/m²:")
+    I = float(input())
+    
+    Em = math.sqrt((2 * I) / (epsilon_0 * c))
+    Bm = Em / c
+    
+    print(f'Campo elétrico máximo (Em): {Decimal(Em):.2E} V/m')
+    print(f'Campo magnético máximo (Bm): {Decimal(Bm):.2E} T')
 
 #Funções 2
 def frequencia():

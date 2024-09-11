@@ -20,24 +20,31 @@ def menu():
     opcao = int(input("Digite a opção desejada: "))
 
     if opcao == 1:
+      print()
       em()
       print()
     elif opcao == 2:
+      print()
       bm()
       print()
     elif opcao == 3:
+      print()
       intensidade()
       print()
     elif opcao == 4:
+      print()
       frequencia()
       print()
     elif opcao == 5:
+      print()
       comprimento()
       print()
     elif opcao == 6:
+      print()
       numeroOndas()
       print()
     elif opcao == 7:
+      print()
       frequenciaAngular()
       print()
     elif opcao == 0:
@@ -51,8 +58,8 @@ def em():
     Bm = Em / c
     I = 0.5 * epsilon_0 * c * Em**2
     
-    print(f'Campo magnético máximo (Bm): {Decimal(Bm):.2E} T')
-    print(f'Intensidade (I): {Decimal(I):.2E} W/m²')
+    print(f'Campo magnético máximo: {Decimal(Bm):.2E} T')
+    print(f'Intensidade: {Decimal(I):.2E} W/m²')
 
 def bm():
     print("Entre com a amplitude do campo magnetico: ")
@@ -61,8 +68,8 @@ def bm():
     Em = c * Bm
     I = 0.5 * (Em**2 / Z_0)
     
-    print(f'Campo elétrico máximo (Em): {Decimal(Em):.2E} V/m')
-    print(f'Intensidade (I): {Decimal(I):.2E} W/m²')
+    print(f'Campo elétrico máximo: {Decimal(Em):.2E} V/m')
+    print(f'Intensidade {Decimal(I):.2E} W/m²')
 
 def intensidade():
     print("Entre com a intensidade: ")
@@ -71,8 +78,8 @@ def intensidade():
     Em = math.sqrt((2 * I) / (epsilon_0 * c))
     Bm = Em / c
     
-    print(f'Campo elétrico máximo (Em): {Decimal(Em):.2E} V/m')
-    print(f'Campo magnético máximo (Bm): {Decimal(Bm):.2E} T')
+    print(f'Campo elétrico máximo: {Decimal(Em):.2E} V/m')
+    print(f'Campo magnético máximo: {Decimal(Bm):.2E} T')
 
 #Funções 2
 def frequencia():
@@ -83,9 +90,9 @@ def frequencia():
   k = 2 * math.pi / l
   w = 2 * math.pi * f
 
-  print('Comprimento (m): %.2E' % Decimal (l))
-  print('Numero de ondas (rad/m): %.2E' % Decimal (k))
-  print('Frequencia angular (rad/s): %.2E' % Decimal (w))
+  print('Comprimento: %.2E m' % Decimal (l))
+  print('Numero de ondas: %.2E rad/m' % Decimal (k))
+  print('Frequencia angular: %.2E rad/s' % Decimal (w))
 
 
 def comprimento():
@@ -96,9 +103,9 @@ def comprimento():
   k = 2 * math.pi / l
   w = 2 * math.pi * f
 
-  print('Frequencia (Hz): %.2E' % Decimal (f))
-  print('Numero de ondas (rad/m): %.2E' % Decimal (k))
-  print('Frequencia angular (rad/s): %.2E' % Decimal (w))
+  print('Frequencia: %.2E Hz' % Decimal (f))
+  print('Numero de ondas: %.2E rad/m' % Decimal (k))
+  print('Frequencia angular: %.2E rad/s' % Decimal (w))
 
 def numeroOndas():
   print("Entre com numero de ondas: ")
@@ -108,9 +115,9 @@ def numeroOndas():
   f = c / l
   w = 2 * math.pi * f
 
-  print('Frequencia (Hz): %.2E' % Decimal (f))
-  print('Comprimento (m): %.2E' % Decimal (l))
-  print('Frequencia angular (rad/s): %.2E' % Decimal (w))
+  print('Frequencia: %.2E Hz' % Decimal (f))
+  print('Comprimento: %.2E m' % Decimal (l))
+  print('Frequencia angular: %.2E rad/s' % Decimal (w))
 
 def frequenciaAngular():
   print("Entre com a frequencia angular: ")
@@ -120,9 +127,9 @@ def frequenciaAngular():
   l = c / f
   k = 2 * math.pi / l
 
-  print('Comprimento (m): %.2E' % Decimal (l))
-  print('Numero de ondas (rad/m): %.2E' % Decimal (k))
-  print('Frequencia (Hz): %.2E' % Decimal (f))
+  print('Comprimento: %.2E m' % Decimal (l))
+  print('Numero de ondas: %.2E rad/m' % Decimal (k))
+  print('Frequencia: %.2E Hz' % Decimal (f))
 
 
 print("Autores:")
@@ -132,10 +139,11 @@ print()
 print("------------------------------------------------------------------------------------")
 print()
 print("Calculadora OEM")
-print("O programa abaixo faz conversoes de dados relevantes das ondas eletromagneticas")
-print("Deve ser entrado um valor para que o programa o converta para seus dados relacionados")
+print("Ondas eletromagneticas sao formadas pelos campos eletricos e magneticos e destacam-se por sua propagacao no vacuo")
+print("O programa abaixo faz conversoes dos dados relevantes as ondas eletromagneticas")
+print("Deve ser entrado um valor para que o programa o converta para seus dados relacionados:")
 print("Relacoes 1: frequencia; comprimento; frequencia angular; numero de ondas")
-print("Relacoes 2: amplitude do campo eletrico; amplitude do campo eletrico; intensidade")
+print("Relacoes 2: amplitude do campo eletrico; amplitude do campo magnetico; intensidade")
 print()
 print("------------------------------------------------------------------------------------")
 print()

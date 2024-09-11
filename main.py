@@ -45,7 +45,7 @@ def menu():
       break
 
 def em():
-    print("Para obter Bm e I Entre com o campo elétrico máximo (Em) em V/m:")
+    print("Entre com a amplitude do campo eletrico: ")
     Em = float(input())
     
     Bm = Em / c
@@ -55,7 +55,7 @@ def em():
     print(f'Intensidade (I): {Decimal(I):.2E} W/m²')
 
 def bm():
-    print("Para obter Em e I entre com o campo magnético máximo (Bm) em T:")
+    print("Entre com a amplitude do campo magnetico: ")
     Bm = float(input())
     
     Em = c * Bm
@@ -65,7 +65,7 @@ def bm():
     print(f'Intensidade (I): {Decimal(I):.2E} W/m²')
 
 def intensidade():
-    print("Para obter Em e Bm Entre com a intensidade (I) em W/m²:")
+    print("Entre com a intensidade: ")
     I = float(input())
     
     Em = math.sqrt((2 * I) / (epsilon_0 * c))
@@ -76,8 +76,8 @@ def intensidade():
 
 #Funções 2
 def frequencia():
-  print("Entre com a frequencia (Hz)")
-  f = float(input()) * 10**11
+  print("Entre com a frequencia")
+  f = float(input()) 
 
   l = c / f
   k = 2 * math.pi / l
@@ -89,8 +89,8 @@ def frequencia():
 
 
 def comprimento():
-  print("Entre com o comprimento (m): ")
-  l = float(input()) * 10**-10
+  print("Entre com o comprimento: ")
+  l = float(input()) 
 
   f = c / l
   k = 2 * math.pi / l
@@ -101,8 +101,8 @@ def comprimento():
   print('Frequencia angular (rad/s): %.2E' % Decimal (w))
 
 def numeroOndas():
-  print("Entre com numero de ondas (rad/m): ")
-  k = float(input()) * 10**-1
+  print("Entre com numero de ondas: ")
+  k = float(input())
 
   l = 2 * math.pi / k
   f = c / l
@@ -113,8 +113,8 @@ def numeroOndas():
   print('Frequencia angular (rad/s): %.2E' % Decimal (w))
 
 def frequenciaAngular():
-  print("Entre com a frequencia angular (rad/s): ")
-  w = float(input()) * 10**6
+  print("Entre com a frequencia angular: ")
+  w = float(input()) 
   
   f = w / (2 * math.pi)
   l = c / f
@@ -124,6 +124,19 @@ def frequenciaAngular():
   print('Numero de ondas (rad/m): %.2E' % Decimal (k))
   print('Frequencia (Hz): %.2E' % Decimal (f))
 
-c = 3 * 10**8
 
+print("Autores:")
+print("Kayna de Deus Ferreira da Silva")
+print("Mario Eugenio Silva")
+print()
+print("------------------------------------------------------------------------------------")
+print()
+print("Calculadora OEM")
+print("O programa abaixo faz conversoes de dados relevantes das ondas eletromagneticas")
+print("Deve ser entrado um valor de determinada medida para que o programa o converta para seus dados relacionados")
+print("Relacoes 1: frequencia; comprimento; frequencia angular; numero de ondas")
+print("Relacoes 2: amplitude do campo eletrico; amplitude do campo eletrico; intensidade")
+print()
+print("------------------------------------------------------------------------------------")
+print()
 menu()

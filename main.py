@@ -133,7 +133,7 @@ print("-------------------------------------------------------------------------
 print()
 print("Calculadora OEM")
 print("O programa abaixo faz conversoes de dados relevantes das ondas eletromagneticas")
-print("Deve ser entrado um valor de determinada medida para que o programa o converta para seus dados relacionados")
+print("Deve ser entrado um valor para que o programa o converta para seus dados relacionados")
 print("Relacoes 1: frequencia; comprimento; frequencia angular; numero de ondas")
 print("Relacoes 2: amplitude do campo eletrico; amplitude do campo eletrico; intensidade")
 print()
